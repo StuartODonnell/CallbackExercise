@@ -49,9 +49,9 @@ var arrayTasks = {
 		return clonedArray;
 	},
 
-	// findIndexesOf: function (arr, itemToFind) {
+	findIndexesOf: function (arr, itemToFind) {
 
-	// },
+	},
 
 	// sumOfAllEvenNumbersSquared: function (arr) {
 
