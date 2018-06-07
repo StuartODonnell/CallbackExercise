@@ -5,7 +5,7 @@ var arrayTasks = {
 	},
 
 	insertAt: function (arr, itemToAdd, index) {
-    arr.splice(2, 0, 3);
+    arr.splice(index, 0, itemToAdd);
 		return arr;
 
 
@@ -26,17 +26,17 @@ var arrayTasks = {
 		return arr.reduce(reducer);
 	},
 
-	// findDuplicates: function (arr) {
-	// 	var sorted_arr = arr.slice().sort();
-	// 	var results = [];
-	// 	for (var i = 0; i < sorted_arr.length - 1; i++) {
-	// 	    if (sorted_arr[i + 1] == sorted_arr[i]) {
-	// 	        results.push(sorted_arr[i]);
-	// 	    }
-	// 	}
-	//
-	// 	return results;
-	// },
+	findDuplicates: function (arr) {
+		var sorted_arr = arr.slice().sort();
+		var results = [];
+		for (var i = 0; i < sorted_arr.length - 1; i++) {
+		    if (sorted_arr[i + 1] == sorted_arr[i]) {
+		        results.push(sorted_arr[i]);
+		    }
+		}
+
+		return results;
+	},
 
 	removeAndClone: function (arr, valueToRemove) {
 
@@ -48,10 +48,11 @@ var arrayTasks = {
 		}
 		return clonedArray;
 	},
-
-	findIndexesOf: function (arr, itemToFind) {
-
-	},
+//
+// 	findIndexesOf: function (arr, itemToFind) {
+// for ( var i = 0; i < arr.length; i++)
+// var a = fruits.indexOf("Apple");
+	// },
 
 	// sumOfAllEvenNumbersSquared: function (arr) {
 
