@@ -26,16 +26,38 @@ var arrayTasks = {
 		return arr.reduce(reducer);
 	},
 
-	findDuplicates: function (arr) {
-		var sorted_arr = arr.slice().sort();
-		var results = [];
-		for (var i = 0; i < sorted_arr.length - 1; i++) {
-		    if (sorted_arr[i + 1] == sorted_arr[i]) {
-		        results.push(sorted_arr[i]);
-		    }
-		}
+// sum: function (arr) {
+// let sum = 0;
+// arr.forEach(function (number) {
+// 	sum+= number;
+// })
+// 	return sum;
+// },
 
-		return results;
+
+	// findDuplicates: function (arr) {
+	// 	var sorted_arr = arr.slice().sort();
+	// 	var results = [];
+	// 	for (var i = 0; i < sorted_arr.length - 1; i++) {
+	// 	    if (sorted_arr[i + 1] == sorted_arr[i]) {
+	// 	        results.push(sorted_arr[i]);
+	// 	    }
+	// 	}
+	//
+	// 	return results;
+	// },
+
+	findDuplicates: function(arr){
+		let duplicates = [];
+		arr.forEach(function(number, index){
+			if (arr.indexOf(number, index +1 ) >-1){
+				if (duplicates.indexOf(number)  === -1){
+					duplicates.push(number);
+
+				}
+			}
+		});
+		return duplicates;
 	},
 
 	removeAndClone: function (arr, valueToRemove) {
